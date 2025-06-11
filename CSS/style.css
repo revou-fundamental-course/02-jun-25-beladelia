@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e6f0ff;
+  color: #000;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 10px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end; /* pindahkan isi ke kanan */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* jarak antar menu diperkecil */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.facilities, .message-us {
+  padding: 30px;
+  text-align: center;
+}
+
+.facility-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.facility {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #003366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer {
+  text-align: center;
+  background: #003366;
+  color: white;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .facility-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
