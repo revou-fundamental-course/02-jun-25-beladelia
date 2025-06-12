@@ -1,23 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const name = prompt("Siapa nama kamu?");
+// Menyambut user
+window.onload = function () {
+  const name = prompt("Masukkan nama kamu:");
   if (name) {
-    document.getElementById("welcome-text").innerText = `Hi ${name}, Welcome To Website`;
+    document.getElementById("welcome").textContent = `Hi ${name}, Welcome To Website`;
+  }
+};
+
+// Form submit
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const tanggal = document.getElementById("tanggal").value;
+  const pesan = document.getElementById("pesan").value;
+  const genderEls = document.getElementsByName("gender");
+  let gender = "";
+
+  for (let el of genderEls) {
+    if (el.checked) {
+      gender = el.value;
+      break;
+    }
   }
 
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nama = document.getElementById("name").value;
-    const tanggalLahir = document.getElementById("dob").value;
-    const jenisKelamin = document.querySelector('input[name="gender"]:checked').value;
-    const pesan = document.getElementById("message-text").value;
-
-    const output = `
-      <p><strong>Nama:</strong> ${nama}</p>
-      <p><strong>Tanggal Lahir:</strong> ${tanggalLahir}</p>
-      <p><strong>Jenis Kelamin:</strong> ${jenisKelamin}</p>
-      <p><strong>Pesan:</strong> ${pesan}</p>
-    `;
-    document.getElementById("form-output").innerHTML = output;
-  });
+  const resultBox = document.getElementById("resultBox");
+  resultBox.innerHTML = `
+    <div style="border: 1px solid #333; padding: 10px; margin-top: 20px;">
+      <strong>Nama:</strong> ${nama}<br>
+      <strong>Tanggal Lahir:</strong> ${tanggal}<br>
+      <strong>Jenis Kelamin:</strong> ${gender}<br>
+      <strong>Pesan:</strong> ${pesan}
+    </div>
+  `;
 });

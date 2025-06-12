@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SMAN 1 Cigombong</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <!-- Navbar -->
   <header>
     <div class="container nav-container">
-      <div class="logo">🏫</div>
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" class="logo-img"/>
+      </div>
       <nav>
         <a href="#home">Home</a>
         <a href="#profile">Our Profile</a>
@@ -22,55 +24,65 @@
 
   <!-- Home Section -->
   <section id="home" class="home-section">
-    <h1 id="welcome">Hi, Welcome To Website</h1>
-    <p>Ini adalah website latihan pertama</p>
-    <div class="banner-image">banner-image</div>
-  </section>
-
-  <!-- Our Facilitation Section -->
-  <section class="facilities">
-    <h2>Our Facilitation</h2>
-    <div class="facility-list">
-      <div class="facility">teacher <p>Professional Teacher</p></div>
-      <div class="facility">lapangan <p>Sport Field</p></div>
-      <div class="facility">kelas <p>Classroom</p></div>
+    <img src="img/banner.jpeg" alt="Banner" class="banner"/>
+    <div class="hero">
+      <h1 id="welcome">Hi, Welcome To Website</h1>
+      <p>Ini adalah website tentang SMAN 1 Cigombong</p>
     </div>
   </section>
 
-  <!-- Our Profile Section -->
+  <!-- Our Profile -->
   <section id="profile" class="profile-section">
     <h2>About SMAN 1 Cigombong</h2>
     <p>SMAN 1 Cigombong adalah sekolah unggulan di daerah Cigombong yang berfokus pada pendidikan berkualitas dan karakter siswa.</p>
-    <h3>Vision</h3>
-    <p>Menjadi sekolah unggulan dalam prestasi dan akhlak mulia di tingkat nasional.</p>
-    <h3>Mission</h3>
-    <ul>
-      <li>Meningkatkan mutu pendidikan akademik dan non-akademik</li>
-      <li>Menanamkan nilai-nilai karakter pada siswa</li>
-      <li>Mendorong siswa berprestasi melalui berbagai lomba</li>
-    </ul>
+    <div class="vision-mission">
+      <h3>Vision</h3>
+      <p>Mewujudkan lingkungan sekolah yang BERMAKNA ( Berprestasi, Mandiri dan Peduli Lingkungan berdasar Norma Agama. )</p>
+      <h3>Mission</h3>
+      <ul>
+        <li>Membina dan mengembangkan warga sekolah agar berakhlak mulia.</li>
+        <li>Meningkatkan penghayatan dan pengamalan terhadap ajaran agamanya.</li>
+        <li>Melaksanakan pembelajaran yang efektif, kreatif, inovatif dan menyenangkan.</li>
+        <li>Meningkatkan kedisiplinan warga sekolah terhadap  hak dan kewajibannya.</li>
+        <li>Meningkatkan kerjasama antara sekolah, komite, orang tua siswa dan instansi terkait.</li>
+        <li>Menggali dan mengembangkan potensi warga sekolah agar berprestasi dalam berbagai bidang.</li>
+        <li>Meningkatkan kepedulian terhadap lingkungan sekitar.</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Achievement Section -->
-  <section id="achievement" class="achievement-section">
-    <h2>Achievement</h2>
-    <p>[Masukkan daftar prestasi sekolah di sini]</p>
+  <!-- Our Facilities -->
+  <section class="facilities">
+    <h2>Our Facilitation</h2>
+    <div class="facility-list">
+      <div class="facility">
+        <img src="img/teacher.jpg" alt="Teacher" />
+        <p>Professional Teacher</p>
+      </div>
+      <div class="facility">
+        <img src="img/lapangan.jpg" alt="Sport Field" />
+        <p>Sport Field</p>
+      </div>
+      <div class="facility">
+        <img src="img/kelas.jpeg" alt="Classroom" />
+        <p>Classroom</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Message Us Section -->
+  <!-- Message Us -->
   <section id="message" class="message-section">
     <h2>Message Us</h2>
     <form id="contactForm">
-      <label>Nama:<br><input type="text" id="nama" required></label><br>
-      <label>Tanggal Lahir:<br><input type="date" id="tanggal" required></label><br>
+      <label>Nama:<br><input type="text" id="nama" required /></label><br>
+      <label>Tanggal Lahir:<br><input type="date" id="tanggal" required /></label><br>
       <label>Jenis Kelamin:<br>
-        <input type="radio" name="gender" value="Laki-Laki"> Laki-Laki
+        <input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki
         <input type="radio" name="gender" value="Perempuan"> Perempuan
       </label><br>
       <label>Pesan:<br><textarea id="pesan" required></textarea></label><br>
       <button type="submit">Submit</button>
     </form>
-
     <div id="resultBox"></div>
   </section>
 
